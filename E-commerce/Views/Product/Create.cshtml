@@ -1,0 +1,39 @@
+﻿@model E_commerce.Models.ProductViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add Product</h2>
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+
+{
+    @Html.HiddenFor(y=>y.Id)
+<div class="form-group">
+    @Html.LabelFor(y => y.PruductName)
+    @Html.TextBoxFor(y => y.PruductName, new { @class ="form-control" })
+
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(y => y.ProductDescription)
+    @Html.TextBoxFor(y => y.ProductDescription, new { @class = "form-control" })
+
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(y => y.Price)
+    @Html.TextBoxFor(y => y.Price, new { @class = "form-control" })
+
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(y => y.Qty)
+    @Html.TextBoxFor(y => y.Qty, new { @class = "form-control" })
+
+</div>
+
+<button type="submit" class="btn-btn-default">Submit</button>
+                
+            }
+

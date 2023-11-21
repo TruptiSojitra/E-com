@@ -1,0 +1,33 @@
+﻿@model List<E_commerce.Models.ProductViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product Catalog</h2>
+<button type="button" class="btn btn-outline-warning"><a href="@Url.Action("Create","Product")"> + New Product</a></button>
+
+<table class="table table-hover">
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach(var myData in Model)
+            {
+    <tr>
+        <td>@myData.Id</td>
+        <td>@myData.PruductName</td>
+        <td>@myData.ProductDescription</td>
+        <td>@myData.Price</td>
+        <td>@myData.Qty</td>
+        <td><a href="@Url.Action("Edit", "Product", new { productId = myData.Id })">Edit</a></td>
+        <td><a href="@Url.Action("Delete", "Product", new { productId = myData.Id })">Delete</a></td>
+
+    </tr>
+            }
+</table>
+
