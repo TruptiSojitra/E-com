@@ -61,10 +61,7 @@ namespace E_commerce.Concrete
 
                     myProduct = productViewModel.ToViewModel(myProduct);
                  
-                    //myProduct.ProductName = productViewModel.PruductName;
-                    //myProduct.ProductDescription = productViewModel.ProductDescription;
-                    //myProduct.Price = productViewModel.Price;
-                    //myProduct.Qty = productViewModel.Qty;
+                    
                     
                     var myresult = ecommerce.SaveChanges();
 
